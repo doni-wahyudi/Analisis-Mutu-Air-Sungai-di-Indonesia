@@ -32,6 +32,8 @@ Kategori mutu air seperti “Cemar Ringan”, “Cemar Sedang”, dan “Cemar B
 <li> Sedang: 11–29
 <li> Buruk: ≥30
 
+Notes : Kategori mutu air didasarkan pada PP No. 82 Tahun 2021[^2], untuk penentuan status mutu air berdasarkan US-EPA[^3]
+
 ### 🔹Struktur Data
 1. Data diubah menjadi nested dictionary `mutu_dict` dengan struktur provinsi -> sungai -> list mutu per tahun.
 2. Dictionary tambahan `sungai_dict` dibuat untuk analisis per sungai secara individual.
@@ -44,16 +46,70 @@ Kategori mutu air seperti “Cemar Ringan”, “Cemar Sedang”, dan “Cemar B
 <li> Background visual dibagi dalam tiga zona warna: hijau (baik), kuning (sedang), merah muda (buruk).
 
 ## 💡 Hasil
-<li> Beberapa sungai menunjukkan tren penurunan mutu air yang konsisten dalam kurun waktu 2017–2022.
-<li> Provinsi dengan jumlah sungai tercemar berat lebih banyak dapat menjadi target kebijakan prioritas untuk rehabilitasi lingkungan.
-<li> Visualisasi memberikan gambaran yang intuitif dan mudah dibaca oleh pemangku kebijakan maupun masyarakat umum.
+1. Beberapa sungai menunjukkan tren peningkatan mutu air dalam kurun waktu 2017–2022, diantaranya:
+    <ul>
+    <li> Asahan (SUMATERA UTARA)
 
-## 📄 Kesimpulan
-Proyek ini menunjukkan bahwa data mutu air sungai dapat diolah dan divisualisasikan secara efektif untuk:
-<li> Mengidentifikasi permasalahan lingkungan secara geografis,
-<li> Mendorong kolaborasi lintas sektor dalam menjaga kualitas air,
-<li> Dan meningkatkan transparansi informasi lingkungan kepada publik.
+    ![asahan](assets/image.png)
+    <li> Cisadane (JAWA BARAT)
+    
+    ![cisadane](assets/image-1.png)
+    <li> Aesesa (NUSA TENGGARA TIMUR)
+    
+    ![aesesa](assets/image-2.png)
+    <li> Citanduy (JAWA BARAT)
+    
+    ![citanduy](assets/image-3.png)
+    <li> Baturusa (KEPULAUAN BANGKA BELITUNG)
+    
+    ![baturusa](assets/image-4.png)
+</ul>
+
+2. Beberapa sungai menunjukkan tren penurunan mutu air dalam kurun waktu 2017–2022, diantaranya:
+    <ul>
+    <li> Babak (NUSA TENGGARA BARAT)
+    
+    ![babak](assets/image-5.png)
+    <li> Batang Kampar (SUMATERA BARAT)
+    
+    ![batang kampar](assets/image-6.png)
+    <li> Brangbiji (NUSA TENGGARA BARAT)
+    
+    ![brangbiji](assets/image-7.png)
+    <li> Muka Kuning (KEPULAUAN RIAU)
+
+    ![muka kuning](assets/image-8.png)
+    <li> Outlet Danau Semayang (KALIMANTAN TIMUR)
+
+    ![outlet semayang](assets/image-9.png)
+</ul>
+
+
+3. Provinsi dengan jumlah sungai tercemar sedang hingga berat lebih banyak yaitu:
+    <ul>
+    <li> NUSA TENGGARA BARAT
+
+    ![NTB](assets/image-10.png)
+    <li> MALUKU
+
+    ![maluku](assets/image-11.png)
+    <li> RIAU
+
+    ![riau](assets/image-12.png)
+</ul>
+
+Untuk proses dan hasil visualisasi dari notebook dapat dilihat pada file berikut:  
+[analisis_mutu_air_sungai.ipynb](analisis_mutu_air_sungai.ipynb)
+
+## 📄 Saran dan Kesimpulan
+Berdasarkan hasil dari analisa yang kami lakukan, berikut beberapa saran yang kami ajukan:
+<li> Sebagian data masih rancu dalam pengklasifikasian dan pemberian bobot nya, sebagai contoh ada kategori cemar ringan- cemar berat yang membuat kami ragu dalam memberikan bobot nya, harapannya ada perapihan standar pengklasifikasian serta penentuan bobot nya agar hasil yang didapat lebih baik,
+<li> Untuk sungai yang punya tren penurunan kualitas agar dapat diberi perhatian lebih, bisa berupa inspeksi akar masalah yang memperparah kondisi sungai tersebut, selain itu juga bisa menjadi acuan untuk membuat program clean up sungai di wilayah masing-masing,
+<li> Untuk sungai yang punya tren kenaikan kualitas mutu air agar bisa diberikan reward atau penghargaan kepada wilayah tersebut sehingga dapat memberikan motivasi agar setiap wilayah berlomba-lomba memperbaiki kualitas mutu air sungai nya. 
+
 Dengan integrasi analitik lanjutan seperti clustering atau prediksi tren, proyek ini dapat dikembangkan lebih lanjut menjadi sistem peringatan dini (early warning system) atau dashboard pemantauan mutu air sungai nasional.
 
 ---
-[^1]: My reference.
+[^1]: [SISLHK: Data Status Mutu Air](https://statistik.menlhk.go.id/sisklhkX/data_statistik/ppkl/table5_18)  
+[^2]: [PP No. 82 Tahun 2001](https://peraturan.bpk.go.id/Details/53103/pp-no-82-tahun-2001)  
+[^3]: [Penilaian Status Mutu Air](https://www.scribd.com/document/486899916/4-Penilaian-Status-Mutu-Air)
